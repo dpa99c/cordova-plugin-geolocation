@@ -35,14 +35,13 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <engine name="cordova-android" version=">=6.3.0" />
     </engines>
     <preference name="GPS_REQUIRED" default="true"/>
-
     <!-- android -->
     <platform name="android">
 
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-            <uses-feature android:name="android.hardware.location.gps" android:required="$GPS_REQUIRED" />
+            <uses-feature android:name="android.hardware.location.gps" />
         </config-file>
 
         <config-file target="res/xml/config.xml" parent="/*">
